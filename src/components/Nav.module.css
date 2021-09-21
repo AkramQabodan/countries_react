@@ -1,0 +1,34 @@
+.Nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  background-color: brown;
+  padding: 0 60px;
+  font-weight: 800;
+}
+.title {
+  font-size: 30px;
+}
+.dark-mode-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  padding-right: 10px;
+}
+@media only screen and (max-width: 375px) {
+  .Nav {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .dark-mode-option {
+    font-size: 11px;
+  }
+  .icon {
+    padding: 0 5px;
+  }
+}
