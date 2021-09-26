@@ -1,0 +1,41 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.continents {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+  width: 220px;
+  opacity: 0;
+  background-color: rgb(255, 255, 255);
+  transition: opacity 150ms ease-in-out;
+}
+.button:focus + .continents {
+  opacity: 1;
+}
+
+.button {
+  border: none;
+  height: 100%;
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 900;
+}
+
+.button::after {
+  content: "▼";
+  padding-left: 65px;
+  font-size: 1.25rem;
+}
