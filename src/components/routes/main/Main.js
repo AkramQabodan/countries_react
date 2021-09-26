@@ -1,10 +1,11 @@
 import React from "react";
-
+import classes from "./Main.module.css";
+import SearchBar from "./SearchBar";
 function Main() {
   return (
-    <>
-      <h2>Hello</h2>
-    </>
+    <div className={classes.main}>
+      <SearchBar />
+    </div>
   );
 }
 export default Main;

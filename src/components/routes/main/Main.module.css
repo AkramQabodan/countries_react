@@ -1,0 +1,7 @@
+.main {
+  height: 92vh;
+  display: flex;
+  padding: 30px 60px;
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: inset 0 2px 3px rgba(176, 176, 176, 0.3);
+}

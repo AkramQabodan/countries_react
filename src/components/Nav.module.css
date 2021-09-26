@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  background-color: brown;
+  /* background-color: brown; */
   padding: 0 60px;
   font-weight: 800;
 }
@@ -17,6 +17,7 @@
 }
 .icon {
   padding-right: 10px;
+  width: fit-content;
 }
 @media only screen and (max-width: 375px) {
   .Nav {
