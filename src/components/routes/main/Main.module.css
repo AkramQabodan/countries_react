@@ -11,3 +11,12 @@
   width: 100%;
   height: 50px;
 }
+@media only screen and (max-width: 375px) {
+  .main {
+    padding: 10px 10px;
+  }
+  .tools {
+    flex-direction: column;
+    height: 150px;
+  }
+}

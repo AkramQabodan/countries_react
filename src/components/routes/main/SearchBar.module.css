@@ -1,8 +1,13 @@
 input {
   border: none;
+  border-radius: 5px;
   height: 100%;
   margin-left: 10px;
   color: RGB(133, 133, 133);
+  width: 100%;
+}
+input:focus {
+  outline: none;
 }
 .searchBar {
   width: 500px;
@@ -11,11 +16,17 @@ input {
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  padding: 0 25px;
-  /* height: 50px; */
+  padding-left: 25px;
+  height: 50px;
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
 }
 .icon {
   color: RGB(133, 133, 133);
+}
+@media only screen and (max-width: 375px) {
+  .searchBar {
+    margin-top: 15px;
+    width: 100%;
+  }
 }
