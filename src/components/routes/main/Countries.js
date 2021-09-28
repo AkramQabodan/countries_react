@@ -5,6 +5,18 @@ function Countries() {
   return (
     <div className={classes.countriesContainer}>
       <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
     </div>
   );
 }

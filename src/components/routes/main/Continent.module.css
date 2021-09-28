@@ -52,4 +52,7 @@ li {
   padding: 5px 5px;
 }
 @media only screen and (max-width: 375px) {
+  .button {
+    margin-top: 50px;
+  }
 }
