@@ -1,7 +1,8 @@
 import React from "react";
 import Continent from "./Continent";
-import classes from "./Main.module.css";
+import Countries from "./Countries";
 import SearchBar from "./SearchBar";
+import classes from "./Main.module.css";
 function Main() {
   return (
     <div className={classes.main}>
@@ -9,6 +10,7 @@ function Main() {
         <SearchBar />
         <Continent />
       </div>
+      <Countries />
     </div>
   );
 }
