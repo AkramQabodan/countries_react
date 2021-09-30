@@ -5,12 +5,12 @@ function Continent() {
     <div className={classes.dropdown}>
       <button className={classes.button}>Filter by Region</button>
       <div className={classes.continents}>
-        <ul>
-          <li>Africa</li>
-          <li>America</li>
-          <li>Asia</li>
-          <li>Europe</li>
-          <li>Oceania</li>
+        <ul className={classes.ul}>
+          <li className={classes.li}>Africa</li>
+          <li className={classes.li}>America</li>
+          <li className={classes.li}>Asia</li>
+          <li className={classes.li}>Europe</li>
+          <li className={classes.li}>Oceania</li>
         </ul>
       </div>
     </div>
