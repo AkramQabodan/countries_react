@@ -71,3 +71,28 @@
 .borderTitle {
   margin-right: 15px;
 }
+
+@media only screen and (max-width: 375px) {
+  .container {
+    padding: 0 20px;
+  }
+  .button {
+    height: 30px;
+    width: 100px;
+    font-size: 1rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .detailsContainer {
+    flex-direction: column;
+    gap: 0;
+  }
+  .img {
+    width: 100%;
+    min-height: auto;
+  }
+  .detailsTable {
+    display: flex;
+    flex-direction: column;
+  }
+}
