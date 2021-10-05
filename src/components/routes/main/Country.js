@@ -1,22 +1,23 @@
 import { React } from "react";
 import classes from "./Country.module.css";
-import flag from "./imgs/Egypt.png";
-function Country() {
+
+function Country(props) {
   return (
     <div className={classes.card}>
-      <img className={classes.img} src={flag} />
-      {/* <div className={classes.imgContainer}></div> */}
+      <div className={classes.imgContainer}>
+        <img className={classes.img} src={props.flag} />
+      </div>
       <div className={classes.detailsContainer}>
-        <span className={classes.countryName}>Egypt</span>
+        <span className={classes.countryName}>{props.name}</span>
         <div className={classes.details}>
           <span className={classes.span}>
-            <p className={classes.p}>Population :</p> 100,000,000
+            <p className={classes.p}>Population :</p> {props.population}
           </span>
           <span className={classes.span}>
-            <p className={classes.p}>region :</p> Africa
+            <p className={classes.p}>region :</p> {props.region}
           </span>
           <span className={classes.span}>
-            <p className={classes.p}>Capital :</p> Cairo
+            <p className={classes.p}>Capital :</p> {props.capital}
           </span>
         </div>
       </div>

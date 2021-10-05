@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./SearchResult.module.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import flag from "../main/imgs/egypt-flag-medium.png";
+
 import Info from "./Info";
 import BorderCountry from "./BorderCountry.js";
 function SearchResult() {
@@ -13,7 +13,7 @@ function SearchResult() {
       </button>
 
       <div className={classes.detailsContainer}>
-        <img className={classes.img} src={flag} />
+        <img className={classes.img} />
         <div className={classes.details}>
           <span className={classes.countryName}>Egypt</span>
           <ul className={classes.detailsTable}>
