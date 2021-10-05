@@ -34,6 +34,9 @@
   padding-left: 20px;
   font-weight: 900;
 }
+.button:hover {
+  cursor: pointer;
+}
 
 .button::after {
   content: "▼";
@@ -50,6 +53,12 @@
 .li {
   list-style: none;
   padding: 5px 5px;
+}
+
+.li:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.4),
+    -1px -1px 3px rgba(176, 176, 176, 0.4);
 }
 @media only screen and (max-width: 375px) {
   .button {
