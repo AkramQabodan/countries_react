@@ -5,7 +5,7 @@ function Country(props) {
   return (
     <div className={classes.card}>
       <div className={classes.imgContainer}>
-        <img className={classes.img} src={props.flag} />
+        <img className={classes.img} src={props.flag} alt="Flag img" />
       </div>
       <div className={classes.detailsContainer}>
         <span className={classes.countryName}>{props.name}</span>

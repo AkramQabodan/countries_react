@@ -13,7 +13,7 @@ function SearchResult() {
       </button>
 
       <div className={classes.detailsContainer}>
-        <img className={classes.img} />
+        <img className={classes.img} alt="Flag img" />
         <div className={classes.details}>
           <span className={classes.countryName}>Egypt</span>
           <ul className={classes.detailsTable}>
