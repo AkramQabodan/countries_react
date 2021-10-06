@@ -4,8 +4,7 @@ import { CountriesData } from "../../../CountriesData";
 import Country from "./Country";
 function Countries() {
   const [UI, setUI] = useState();
-  const data = useContext(CountriesData);
-
+  const { countries: data, continentFilter } = useContext(CountriesData);
   useEffect(() => {
     if (!data) {
       return;
@@ -25,6 +24,10 @@ function Countries() {
     }
   }, [data]);
 
-  return <div className={classes.countriesContainer}>{UI}</div>;
+  return (
+    <div className={classes.countriesContainer}>
+      {continentFilter ? continentFilter : UI}
+    </div>
+  );
 }
 export default Countries;
