@@ -6,6 +6,7 @@ input {
   color: RGB(133, 133, 133);
   width: 100%;
 }
+
 input:focus {
   outline: none;
 }
