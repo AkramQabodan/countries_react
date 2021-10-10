@@ -37,6 +37,7 @@ export const CountriesProvider = (props) => {
             region={country.region}
             capital={country.capital}
             key={index}
+            code={country.cioc}
           />
         ))
     );
@@ -57,6 +58,7 @@ export const CountriesProvider = (props) => {
             region={country.region}
             capital={country.capital}
             key={index}
+            code={country.cioc}
           />
         ))
     );

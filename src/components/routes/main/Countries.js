@@ -23,6 +23,7 @@ function Countries() {
             region={i.region}
             capital={i.capital}
             key={i.name}
+            code={i.cioc}
           />
         ))
       );
@@ -32,7 +33,6 @@ function Countries() {
   useEffect(() => {
     if (continentFilter) {
       setUI(continentFilter);
-      // console.log(searchFilter);
     } else if (searchFilter) {
       setUI(searchFilter);
     } else {

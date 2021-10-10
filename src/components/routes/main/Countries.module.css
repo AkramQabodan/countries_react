@@ -2,7 +2,7 @@
   margin-top: 30px;
   padding-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(355px, auto));
+  grid-template-columns: repeat(4, minmax(355px, auto));
   justify-content: space-between;
   row-gap: 100px;
   column-gap: 100px;

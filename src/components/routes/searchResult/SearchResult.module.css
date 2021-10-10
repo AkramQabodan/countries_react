@@ -25,6 +25,9 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
+.button:hover {
+  cursor: pointer;
+}
 .detailsContainer {
   justify-content: space-between;
   display: flex;
@@ -36,6 +39,8 @@
   min-height: 100%;
   width: 600px;
   border-radius: 0%;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
 }
 .details {
   display: flex;
@@ -70,6 +75,10 @@
 }
 .borderTitle {
   margin-right: 15px;
+}
+.link {
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (max-width: 375px) {
