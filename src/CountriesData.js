@@ -15,13 +15,12 @@ export const CountriesProvider = (props) => {
     }
     return splitStr.join(" ");
   }
-
+  const getCountries = async () => {
+    const raw = await fetch("https://restcountries.com/v3.1/all");
+    const data = await raw.json();
+    setCountries(data);
+  };
   useEffect(() => {
-    async function getCountries() {
-      const raw = await fetch("https://restcountries.com/v2/all");
-      const data = await raw.json();
-      setCountries(data);
-    }
     getCountries();
   }, []);
 
@@ -29,15 +28,15 @@ export const CountriesProvider = (props) => {
     setcontinentFilter(
       countries
         .filter((country) => country.region === event.target.innerText)
-        .map((country, index) => (
+        .map((i, index) => (
           <Country
-            flag={country.flags.svg}
-            name={country.name}
-            population={country.population}
-            region={country.region}
-            capital={country.capital}
+            flag={i.flags.svg}
+            name={i.name.common}
+            population={i.population}
+            region={i.region}
+            capital={i.capital}
             key={index}
-            code={country.cioc}
+            code={i.cioc || i.cca3}
           />
         ))
     );
@@ -48,17 +47,17 @@ export const CountriesProvider = (props) => {
     setSearchFilter(
       countries
         .filter((country) =>
-          country.name.includes(titleCase(event.target.value))
+          country.name.common.includes(titleCase(event.target.value))
         )
-        .map((country, index) => (
+        .map((i, index) => (
           <Country
-            flag={country.flags.svg}
-            name={country.name}
-            population={country.population}
-            region={country.region}
-            capital={country.capital}
+            flag={i.flags.svg}
+            name={i.name.common}
+            population={i.population}
+            region={i.region}
+            capital={i.capital}
             key={index}
-            code={country.cioc}
+            code={i.cioc || i.cca3}
           />
         ))
     );

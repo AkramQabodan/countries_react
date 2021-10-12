@@ -15,15 +15,15 @@ function Countries() {
       return;
     } else {
       setAllCountries(
-        data.map((i) => (
+        data.map((i, index) => (
           <Country
             flag={i.flags.svg}
-            name={i.name}
+            name={i.name.common}
             population={i.population}
             region={i.region}
             capital={i.capital}
-            key={i.name}
-            code={i.cioc}
+            key={index}
+            code={i.cca3 || i.cca3}
           />
         ))
       );

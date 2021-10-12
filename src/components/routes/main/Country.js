@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Country(props) {
   const selectedCountryHandler = () => {
-    const code = props.code.toLowerCase();
+    const code = props.code;
     localStorage.setItem("code", code);
   };
   return (
