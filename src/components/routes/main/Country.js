@@ -1,15 +1,18 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import classes from "./Country.module.css";
 import { Link } from "react-router-dom";
-
+import { CountriesData } from "../../../CountriesData";
 function Country(props) {
+  const { theme } = useContext(CountriesData);
+  const cardTheme = theme === "light" ? "cardLight" : "cardDark";
   const selectedCountryHandler = () => {
     const code = props.code;
     localStorage.setItem("code", code);
   };
+
   return (
     <Link className={classes.link} to={`/search-result/${props.name}`}>
-      <div className={classes.card} onClick={selectedCountryHandler}>
+      <div className={classes[cardTheme]} onClick={selectedCountryHandler}>
         <div className={classes.imgContainer}>
           <img className={classes.img} src={props.flag} alt="Flag img" />
         </div>

@@ -6,11 +6,20 @@ input {
   color: RGB(133, 133, 133);
   width: 100%;
 }
-
+.inputLight {
+  color: hsl(0, 0%, 52%);
+}
+.inputDark {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.inputDark::placeholder {
+  color: hsl(0, 0%, 100%);
+}
 input:focus {
   outline: none;
 }
-.searchBar {
+.searchBarLight {
   width: 500px;
   border-radius: 5px;
   display: flex;
@@ -22,8 +31,24 @@ input:focus {
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
 }
-.icon {
+.searchBarDark {
+  width: 500px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  padding-left: 25px;
+  height: 50px;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+}
+.iconLight {
   color: RGB(133, 133, 133);
+}
+.iconDark {
+  color: hsl(0, 0%, 100%);
 }
 @media only screen and (max-width: 375px) {
   .searchBar {

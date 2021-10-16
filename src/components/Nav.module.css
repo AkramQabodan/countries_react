@@ -1,26 +1,56 @@
-.Nav {
+.navLight {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 8vh;
-  /* background-color: brown; */
   padding: 0 60px;
   font-weight: 800;
 }
-.title {
-  font-size: 30px;
+.navDark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  padding: 0 60px;
+  font-weight: 800;
+  background-color: hsl(209, 23%, 22%);
 }
-.dark-mode-option {
+.titleLight {
+  font-size: 30px;
+  color: black;
+}
+.titleDark {
+  font-size: 30px;
+  color: hsl(0, 0%, 100%);
+}
+a {
+  text-decoration: none;
+}
+.darkModeOptionLight {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
-.icon {
+.darkModeOptionDark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+}
+
+.iconLight {
   padding-right: 10px;
   width: fit-content;
 }
+.iconDark {
+  padding-right: 10px;
+  width: fit-content;
+  color: hsl(0, 0%, 100%);
+}
 @media only screen and (max-width: 375px) {
-  .Nav {
+  .nav {
     padding: 0 10px;
   }
   .title {

@@ -1,5 +1,5 @@
-.container {
-  height: 92vh;
+.containerLight {
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -7,11 +7,20 @@
   background-color: hsl(0, 0%, 98%);
   box-shadow: inset 0 2px 3px rgba(176, 176, 176, 0.3);
 }
+.containerDark {
+  color: hsl(0, 0%, 100%);
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 60px;
+  background-color: hsl(207, 26%, 17%);
+  box-shadow: inset 0 2px 3px rgba(176, 176, 176, 0.3);
+}
 .button {
   border: none;
   height: 45px;
   width: 150px;
-  background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
   border-radius: 5px;
@@ -25,19 +34,28 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
+.buttonLight {
+  background-color: rgb(255, 255, 255);
+  color: hsl(200, 15%, 8%);
+}
+.buttonDark {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
 .button:hover {
   cursor: pointer;
 }
 .detailsContainer {
-  justify-content: space-between;
   display: flex;
   gap: 150px;
   height: 40vh;
   width: 100%;
 }
 .img {
+  display: block;
+  object-fit: cover;
   min-height: 100%;
-  width: 600px;
+  width: 580px;
   border-radius: 0%;
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
@@ -84,6 +102,7 @@
 @media only screen and (max-width: 375px) {
   .container {
     padding: 0 20px;
+    min-height: 118vh;
   }
   .button {
     height: 30px;

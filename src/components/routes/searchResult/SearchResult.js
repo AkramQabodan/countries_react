@@ -1,16 +1,12 @@
-import { React, useEffect, useState, useCallback } from "react";
+import { React, useEffect, useState, useContext } from "react";
 import classes from "./SearchResult.module.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import { CountriesData } from "../../../CountriesData";
 import Info from "./Info";
 import BorderCountry from "./BorderCountry.js";
 import { Link } from "react-router-dom";
 function SearchResult() {
   const [country, setCountry] = useState();
-  // const [currencies, setCurrencies] = useState();
-  // const [languages, setLanguages] = useState();
-  // const [nativeLanguage, setNativeLanguage] = useState();
-  // const [UI, setUI] = useState(false);
   const code = localStorage.getItem("code");
   const fetchData = async () => {
     console.log(code);
@@ -22,14 +18,17 @@ function SearchResult() {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [code]);
 
+  const { theme } = useContext(CountriesData);
+  const containerTheme = theme === "light" ? "containerLight" : "containerDark";
+  const buttonTheme = theme === "light" ? "buttonLight" : "buttonDark";
   return (
     <>
       {country ? (
-        <div className={classes.container}>
+        <div className={`${classes[containerTheme]} ${classes.container}`}>
           <Link className={classes.link} to={"/"}>
-            <button className={classes.button}>
+            <button className={`${classes.button} ${classes[buttonTheme]} `}>
               <AiOutlineArrowLeft />
               Back
             </button>
@@ -57,7 +56,7 @@ function SearchResult() {
                 <Info firstInfo="Capital" secondInfo={country.capital} />
                 <Info
                   firstInfo="Top Level Domain"
-                  secondInfo={country.tld[0]}
+                  secondInfo={country.tld ? country.tld[0] : "none"}
                 />
                 <Info
                   firstInfo="Currencies"
@@ -75,7 +74,13 @@ function SearchResult() {
               <div className={classes.borderContainer}>
                 <span className={classes.borderTitle}>Border Countries:</span>
                 <ul className={classes.borderCountries}>
-                  <BorderCountry Info="Lybia"></BorderCountry>
+                  {country.borders ? (
+                    country.borders.map((country, index) => (
+                      <BorderCountry Info={country} key={index} />
+                    ))
+                  ) : (
+                    <p>There aren't border countries</p>
+                  )}
                 </ul>
               </div>
             </div>

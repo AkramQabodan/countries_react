@@ -4,23 +4,32 @@
   align-items: center;
   height: 50px;
 }
-.continents {
+.continentsLight {
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 110%;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
   width: 220px;
-  opacity: 0;
+
   background-color: rgb(255, 255, 255);
   transition: opacity 150ms ease-in-out;
 }
-.button:focus + .continents {
-  opacity: 1;
+.continentsDark {
+  position: absolute;
+  left: 0px;
+  top: 110%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+  width: 220px;
+
+  background-color: hsl(209, 23%, 22%);
+  transition: opacity 150ms ease-in-out;
 }
 
-.button {
+.buttonLight {
   border: none;
   height: 100%;
   width: 220px;
@@ -34,6 +43,28 @@
   padding-left: 20px;
   font-weight: 900;
 }
+.buttonDark {
+  border: none;
+  height: 100%;
+  width: 220px;
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 900;
+  color: hsl(0, 0%, 100%);
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
 .button:hover {
   cursor: pointer;
 }
@@ -43,16 +74,29 @@
   padding-left: 65px;
   font-size: 1.25rem;
 }
-.ul {
+.ulLight {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   margin: 20px;
   font-weight: 900;
 }
-.li {
+.ulDark {
+  background-color: hsl(209, 23%, 22%);
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin: 20px;
+  font-weight: 900;
+}
+.liLight {
   list-style: none;
   padding: 5px 5px;
+}
+.liDark {
+  list-style: none;
+  padding: 5px 5px;
+  color: hsl(0, 0%, 100%);
 }
 
 .li:hover {
@@ -60,8 +104,12 @@
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.4),
     -1px -1px 3px rgba(176, 176, 176, 0.4);
 }
+
 @media only screen and (max-width: 375px) {
   .button {
     margin-top: 50px;
+  }
+  .continents {
+    top: 160%;
   }
 }

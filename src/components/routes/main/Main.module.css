@@ -1,9 +1,17 @@
-.main {
-  min-height: 92vh;
+.mainLight {
+  /* min-height: 92vh; */
   display: flex;
   flex-direction: column;
   padding: 30px 60px;
   background-color: hsl(0, 0%, 98%);
+  box-shadow: inset 0 2px 3px rgba(176, 176, 176, 0.3);
+}
+.mainDark {
+  /* min-height: 92vh; */
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  background-color: hsl(207, 26%, 17%);
   box-shadow: inset 0 2px 3px rgba(176, 176, 176, 0.3);
 }
 .tools {

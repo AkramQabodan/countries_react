@@ -1,4 +1,4 @@
-.card {
+.cardLight {
   display: flex;
   flex-direction: column;
   width: 355px;
@@ -6,6 +6,18 @@
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
     -1px -1px 3px rgba(176, 176, 176, 0.2);
+  background-color: hsl(0, 0%, 100%);
+}
+.cardDark {
+  display: flex;
+  flex-direction: column;
+  width: 355px;
+  height: 450px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(176, 176, 176, 0.2),
+    -1px -1px 3px rgba(176, 176, 176, 0.2);
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }
 .imgContainer {
   border-radius: 5px 5px 0 0;
