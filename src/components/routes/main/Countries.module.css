@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 76vh;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   .countriesContainer {
     display: flex;
     flex-direction: column;

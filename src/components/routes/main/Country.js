@@ -12,7 +12,10 @@ function Country(props) {
 
   return (
     <Link className={classes.link} to={`/search-result/${props.name}`}>
-      <div className={classes[cardTheme]} onClick={selectedCountryHandler}>
+      <div
+        className={`${classes[cardTheme]} ${classes.card}`}
+        onClick={selectedCountryHandler}
+      >
         <div className={classes.imgContainer}>
           <img className={classes.img} src={props.flag} alt="Flag img" />
         </div>

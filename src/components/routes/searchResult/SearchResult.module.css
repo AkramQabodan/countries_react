@@ -99,10 +99,10 @@
   color: black;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   .container {
     padding: 0 20px;
-    min-height: 118vh;
+    min-height: 1200px;
   }
   .button {
     height: 30px;
